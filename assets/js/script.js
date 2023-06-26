@@ -1,1 +1,17 @@
 console.log("hi");
+
+const apiKey = '0ed334a1b75961ee558dfd6ad924e663';
+
+const apiUrl = 'api.openweathermap.org/data/2.5/weather';
+//https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+function checkWeather(){
+        fetch(apiUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+        console.log(data);
+        });
+    }
+
+checkWeather();
