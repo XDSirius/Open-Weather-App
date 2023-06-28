@@ -17,3 +17,7 @@ nav li {
     float: left;
     width: 25%;
 }
+
+hr { 
+    width:25%; height:1px; background: black 
+}
