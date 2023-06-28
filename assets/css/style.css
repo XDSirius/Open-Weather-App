@@ -1,3 +1,14 @@
 body {
-    background-color: blanchedalmond;
+    background-color: rgb(234, 229, 223);
+}
+
+nav li ol {
+    background-image: linear-gradient(rgb(15, 15, 231),rgb(18, 18, 37));
+    color:white;
+    font-size: 80px;
+    text-align: center;
+}
+
+nav li {
+    list-style-type: none;
 }
