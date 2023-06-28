@@ -12,3 +12,8 @@ nav li ol {
 nav li {
     list-style-type: none;
 }
+
+.column {
+    float: left;
+    width: 25%;
+}
