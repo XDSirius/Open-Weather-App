@@ -11,6 +11,8 @@ function checkWeather(){
         })
         .then(function (data) {
         console.log(data);
+        document.querySelector("#city").innerHTML = data.name;
+        document.querySelector("#date").innerHTML = new Date().toLocaleString(data.timezone);
         });
     }
 
