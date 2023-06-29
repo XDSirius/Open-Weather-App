@@ -21,3 +21,7 @@ nav li {
 hr { 
     width:25%; height:1px; background: black 
 }
+
+#search{
+    font-size: 20px;
+}
