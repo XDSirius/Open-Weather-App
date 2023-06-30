@@ -28,6 +28,7 @@ function checkWeather(city){
         .then(function (data) {
             console.log(data);
             for(let i =7; i<data.list.length;i+=8){
+                var element = document.querySelector("forecast");
                 var data = element.append(data.list[7].main.temp);
                 console.log(data.list[7].main.temp);
             }
