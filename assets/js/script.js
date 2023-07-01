@@ -14,7 +14,7 @@ function checkWeather(city){
         .then(function (data) {
         console.log(data);
         document.querySelector("#city").innerHTML = data.name;
-        document.querySelector("#date").innerHTML = new Date(data.dt).toLocaleString(data.timezone);
+        document.querySelector("#date").innerHTML = new Date().toLocaleString();
         
         document.querySelector("#icon").src = "https://openweathermap.org/img/wn/"+data.weather[0].icon+".png";
         document.querySelector("#temperature").innerHTML = "Temperature: "+data.main.temp +"°";
@@ -92,6 +92,8 @@ function checkWeather(city){
             day5Hum.append("Humidity: "+ dataList[35].main.humidity +"% ");
             var day5Date = document.querySelector("#day5Date");
             day5Date.append(dataList[35].dt_txt);
+
+            
             
             }
 
@@ -101,8 +103,22 @@ function checkWeather(city){
 
     }
 
-document.getElementById("button").addEventListener("click",function(event){
+    document.getElementById("button").addEventListener("click",function(event){
     event.preventDefault();
     var cityName = document.getElementById("search-bar").value;
+    localStorage.setItem('searchedCity',cityName)
     checkWeather(cityName);
+
+
+    window.addEventListener('load', function () {
+        var storedCity = localStorage.getItem('searchedCity');
+        //Add City to Local Storage
+
+        var savedCity = document.querySelector("#lastSearch");
+        savedCity.append(storedCity);
+      });
+      
+     
+      
 })
+

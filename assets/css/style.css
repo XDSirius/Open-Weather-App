@@ -1,5 +1,8 @@
 body {
-    background-color: rgb(234, 229, 223);
+    margin:0;
+    padding: 0;
+    border: 0;
+    background-color: rgb(65, 99, 128) !important;
 }
 
 nav li ol {
