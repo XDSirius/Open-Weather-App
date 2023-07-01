@@ -99,14 +99,19 @@ function checkWeather(city){
 
         )
         });
-
+        if(localStorage.getItem("searchedCity")){
+            previousSearchContainer = document.getElementById("lastSearch");
+            previousSearch = document.createElement("div")
+            previousSearch.innerHTML = localStorage.getItem("searchedCity")
+            previousSearchContainer.append(previousSearch)
+        }
 
     }
 
     document.getElementById("button").addEventListener("click",function(event){
     event.preventDefault();
     var cityName = document.getElementById("search-bar").value;
-    localStorage.setItem('searchedCity',cityName)
+   // localStorage.setItem('cityName',cityName)
     checkWeather(cityName);
 
 
